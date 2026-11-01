@@ -1,0 +1,108 @@
+{
+  "_doc": "Critter roster. Purely cosmetic: every critter uses rules.character stats so competitive play is fair. Art (body shapes, gear, colours) is generated from these entries by tools/gen-art.mjs; accent colours fixed gear, the team colour tints each critter's team garment.",
+  "teamColors": [
+    "#ff4d6d",
+    "#3a86ff",
+    "#ffbe0b",
+    "#8ac926"
+  ],
+  "characters": [
+    {
+      "id": "fox",
+      "name": "Fox",
+      "body": "#ff7a2e",
+      "dark": "#b2441a",
+      "belly": "#fff1dc",
+      "inner": "#fff1dc",
+      "accent": "#41557d",
+      "ears": "pointy",
+      "tail": "bushy",
+      "face": "muzzle"
+    },
+    {
+      "id": "bunny",
+      "name": "Bunny",
+      "body": "#f3e9ff",
+      "dark": "#8f7aa8",
+      "belly": "#ffffff",
+      "inner": "#ff9ec4",
+      "accent": "#ff9ec4",
+      "ears": "long",
+      "tail": "puff",
+      "face": "muzzle"
+    },
+    {
+      "id": "bear",
+      "name": "Bear",
+      "body": "#9a5b34",
+      "dark": "#5a321b",
+      "belly": "#f0c27a",
+      "inner": "#f0c27a",
+      "accent": "#ffc23a",
+      "ears": "round",
+      "tail": "stub",
+      "face": "muzzle"
+    },
+    {
+      "id": "frog",
+      "name": "Frog",
+      "body": "#5ed25a",
+      "dark": "#2a7a2f",
+      "belly": "#e6ffb0",
+      "accent": "#ffcf3a",
+      "ears": "none",
+      "tail": "none",
+      "face": "frog"
+    },
+    {
+      "id": "panda",
+      "name": "Panda",
+      "body": "#ffffff",
+      "dark": "#2a2638",
+      "belly": "#ffffff",
+      "inner": "#4a455c",
+      "earColor": "#2a2638",
+      "feet": "#2a2638",
+      "accent": "#7bd36a",
+      "ears": "round",
+      "tail": "stub",
+      "face": "panda"
+    },
+    {
+      "id": "cat",
+      "name": "Cat",
+      "body": "#7f8cff",
+      "dark": "#3e468f",
+      "belly": "#e9ebff",
+      "inner": "#ffb3d0",
+      "accent": "#ffd23f",
+      "ears": "pointy",
+      "tail": "long",
+      "face": "muzzle"
+    },
+    {
+      "id": "penguin",
+      "name": "Penguin",
+      "body": "#2c3557",
+      "dark": "#141a33",
+      "belly": "#ffffff",
+      "feet": "#ffb02e",
+      "accent": "#ffd23f",
+      "ears": "none",
+      "tail": "none",
+      "face": "beak"
+    },
+    {
+      "id": "raccoon",
+      "name": "Raccoon",
+      "body": "#9aa1b0",
+      "dark": "#454a59",
+      "belly": "#efe9df",
+      "inner": "#454a59",
+      "accent": "#454a59",
+      "ears": "round",
+      "tail": "striped",
+      "face": "mask"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "_doc": "Weapon definitions shared by every client and the server. ammo -1 = unlimited. cooldown = own turns before the weapon can be used again. behavior: impact | bounce | drill | mine | strike | teleport. Optional modifiers: pellets+spread (fan of shots), sub (child projectiles on explosion), fuse (seconds), bounce (restitution), maxRange (px of travel), fixedPower, directHit (extra damage on a direct hit).",
+  "weapons": [
+    {
+      "id": "rocket", "name": "Rocket", "ammo": -1, "cooldown": 0, "behavior": "impact",
+      "damage": 45, "directHit": 8, "radius": 55, "speed": 1050, "gravity": 1, "wind": 1, "terrain": 1,
+      "knockback": 330, "projectileRadius": 4, "shake": 9, "trail": "smoke", "aimGuide": 0.35,
+      "desc": "Trusty rocket. Explodes on impact and rides the wind."
+    },
+    {
+      "id": "heavy", "name": "Heavy Rocket", "ammo": 2, "cooldown": 1, "behavior": "impact",
+      "damage": 70, "directHit": 10, "radius": 85, "speed": 900, "gravity": 1.15, "wind": 0.9, "terrain": 1.1,
+      "knockback": 470, "projectileRadius": 6, "shake": 18, "trail": "fire", "aimGuide": 0.3,
+      "desc": "Big, slow and heavy. Huge crater, big knockback."
+    },
+    {
+      "id": "grenade", "name": "Grenade", "ammo": 5, "cooldown": 0, "behavior": "bounce",
+      "damage": 48, "directHit": 0, "radius": 58, "speed": 800, "gravity": 1, "wind": 0.35, "terrain": 1,
+      "knockback": 330, "projectileRadius": 5, "fuse": 3, "bounce": 0.5, "shake": 10, "aimGuide": 0.5,
+      "desc": "Bouncy! Blows up 3 seconds after throwing."
+    },
+    {
+      "id": "cluster", "name": "Cluster Bomb", "ammo": 2, "cooldown": 1, "behavior": "impact",
+      "damage": 25, "directHit": 0, "radius": 40, "speed": 900, "gravity": 1, "wind": 0.8, "terrain": 1,
+      "knockback": 220, "projectileRadius": 5, "shake": 8, "aimGuide": 0.35,
+      "sub": {
+        "id": "bomblet", "count": 5, "spread": 230, "lift": 220, "liftJitter": 160, "behavior": "impact",
+        "damage": 22, "directHit": 0, "radius": 34, "gravity": 1, "wind": 0.5, "terrain": 1,
+        "knockback": 200, "projectileRadius": 3, "shake": 5
+      },
+      "desc": "Bursts into five bomblets on impact."
+    },
+    {
+      "id": "shotgun", "name": "Shotgun", "ammo": 3, "cooldown": 0, "behavior": "impact", "sprite": "pellet",
+      "pellets": 6, "spread": 0.07, "fixedPower": true, "maxRange": 560,
+      "damage": 9, "directHit": 3, "radius": 16, "speed": 1700, "gravity": 0.15, "wind": 0, "terrain": 0.9,
+      "knockback": 110, "projectileRadius": 2, "shake": 3, "aimGuide": 0.45,
+      "desc": "Six-pellet blast. Short range, ignores wind."
+    },
+    {
+      "id": "airstrike", "name": "Air Strike", "ammo": 1, "cooldown": 3, "behavior": "strike", "targeted": "column",
+      "count": 5, "spacing": 38, "dropHeight": -140, "dropSpeed": 340, "dropDrift": 60, "sprite": "airbomb",
+      "damage": 30, "directHit": 0, "radius": 42, "gravity": 1, "wind": 0.3, "terrain": 1,
+      "knockback": 260, "projectileRadius": 5, "shake": 9, "trail": "smoke",
+      "desc": "Calls a bomber run on the cursor. Bombs drift with the wind."
+    },
+    {
+      "id": "mine", "name": "Mine", "ammo": 2, "cooldown": 0, "behavior": "mine",
+      "armTime": 1.5, "triggerRadius": 38, "triggerFuse": 1.0, "bounce": 0.25, "maxFlight": 6,
+      "damage": 42, "directHit": 0, "radius": 52, "speed": 520, "gravity": 1, "wind": 0.2, "terrain": 1,
+      "knockback": 320, "projectileRadius": 5, "shake": 9, "aimGuide": 0.5,
+      "desc": "Lob a proximity mine. Arms after landing and waits."
+    },
+    {
+      "id": "drill", "name": "Burrow Drill", "ammo": 1, "cooldown": 1, "behavior": "drill",
+      "drillDistance": 160, "tunnelRadius": 11,
+      "damage": 50, "directHit": 0, "radius": 55, "speed": 950, "gravity": 1, "wind": 0.5, "terrain": 1,
+      "knockback": 330, "projectileRadius": 4, "shake": 10, "aimGuide": 0.35,
+      "desc": "Tunnels through the ground, then explodes."
+    },
+    {
+      "id": "teleport", "name": "Teleporter", "ammo": 1, "cooldown": 0, "behavior": "teleport", "targeted": "point",
+      "damage": 0, "radius": 0,
+      "desc": "Blink to any open spot. Ends your turn."
+    }
+  ],
+  "hazards": {
+    "barrel": {
+      "id": "barrel", "bodyRadius": 11, "fuse": 0.35,
+      "damage": 35, "directHit": 0, "radius": 60, "terrain": 1, "knockback": 300, "shake": 10
+    },
+    "fieldMine": {
+      "id": "fieldmine", "armTime": 0, "triggerRadius": 38, "triggerFuse": 1.0,
+      "damage": 35, "directHit": 0, "radius": 48, "terrain": 1, "knockback": 300, "shake": 8
+    }
+  }
+}

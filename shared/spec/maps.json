@@ -1,0 +1,225 @@
+{
+  "_doc": "Battle maps. gen drives the deterministic terrain generator (shared/src/sim/terrain-gen.ts and godot/sim/terrain_gen.gd). wind.scale multiplies the match wind setting; wind.bias pushes it toward one direction. hazard is the kill plane at waterLevel.",
+  "maps": [
+    {
+      "id": "grasslands",
+      "name": "Sunny Grasslands",
+      "hazard": "water",
+      "wind": {
+        "scale": 0.9,
+        "bias": 0
+      },
+      "spawn": {
+        "margin": 260,
+        "jitter": 70
+      },
+      "gen": {
+        "base": 0.58,
+        "amp": 420,
+        "rough": 30,
+        "caves": 4,
+        "platforms": 2,
+        "gaps": 0,
+        "bridges": 0,
+        "pillars": 0,
+        "mesa": false,
+        "peaks": 0,
+        "barrels": 2,
+        "fieldMines": 0
+      },
+      "palette": {
+        "sky": ["#2f8be6", "#c4ecff"],
+        "hills": ["#8fd36a", "#4fae4a"],
+        "decor": "flowers",
+        "tree": "#3e9e3a",
+        "top": "#5cc23a",
+        "topLight": "#b4ec5c",
+        "dirt": "#c27a45",
+        "dirt2": "#a9663a",
+        "deep": "#5a3222",
+        "rock": "#a9a49c",
+        "rock2": "#8c867f",
+        "wood": "#c98a4b",
+        "wood2": "#93602f",
+        "liquid": "#1e8fe0",
+        "liquidLight": "#8fe0ff"
+      }
+    },
+    {
+      "id": "canyon",
+      "name": "Desert Canyon",
+      "hazard": "water",
+      "wind": {
+        "scale": 1.15,
+        "bias": 0.25
+      },
+      "spawn": {
+        "margin": 260,
+        "jitter": 60
+      },
+      "gen": {
+        "base": 0.6,
+        "amp": 540,
+        "rough": 16,
+        "caves": 2,
+        "platforms": 1,
+        "gaps": 2,
+        "bridges": 1,
+        "pillars": 2,
+        "mesa": true,
+        "peaks": 0,
+        "barrels": 3,
+        "fieldMines": 1
+      },
+      "palette": {
+        "sky": ["#3d8fe0", "#ffe0b0"],
+        "hills": ["#f0a868", "#cf7a45"],
+        "decor": "cactus",
+        "tree": "#5f9a46",
+        "top": "#ebb85a",
+        "topLight": "#ffe08f",
+        "dirt": "#d9783e",
+        "dirt2": "#bf6332",
+        "deep": "#6e3220",
+        "rock": "#c98d62",
+        "rock2": "#a8704a",
+        "wood": "#a06c3b",
+        "wood2": "#764a20",
+        "liquid": "#22b5c8",
+        "liquidLight": "#9ff2f0"
+      }
+    },
+    {
+      "id": "volcano",
+      "name": "Volcanic Island",
+      "hazard": "lava",
+      "wind": {
+        "scale": 1,
+        "bias": -0.15
+      },
+      "spawn": {
+        "margin": 300,
+        "jitter": 50
+      },
+      "gen": {
+        "base": 0.63,
+        "amp": 380,
+        "rough": 26,
+        "caves": 3,
+        "platforms": 2,
+        "gaps": 1,
+        "bridges": 1,
+        "pillars": 1,
+        "mesa": false,
+        "peaks": 1,
+        "barrels": 3,
+        "fieldMines": 2
+      },
+      "palette": {
+        "sky": ["#2a1838", "#d9583f"],
+        "hills": ["#5d3448", "#3a2032"],
+        "decor": "embers",
+        "tree": "#2a1f2c",
+        "top": "#6b5a68",
+        "topLight": "#a8949f",
+        "dirt": "#4a3640",
+        "dirt2": "#3e2d37",
+        "deep": "#1c1218",
+        "rock": "#6e5e6a",
+        "rock2": "#574a55",
+        "wood": "#7c5437",
+        "wood2": "#5c3c26",
+        "liquid": "#ff5a1f",
+        "liquidLight": "#ffd83f"
+      }
+    },
+    {
+      "id": "snow",
+      "name": "Snow Mountains",
+      "hazard": "water",
+      "wind": {
+        "scale": 1.4,
+        "bias": 0
+      },
+      "spawn": {
+        "margin": 260,
+        "jitter": 70
+      },
+      "gen": {
+        "base": 0.56,
+        "amp": 600,
+        "rough": 38,
+        "caves": 3,
+        "platforms": 1,
+        "gaps": 0,
+        "bridges": 0,
+        "pillars": 0,
+        "mesa": false,
+        "peaks": 2,
+        "barrels": 1,
+        "fieldMines": 1
+      },
+      "palette": {
+        "sky": ["#3a86e0", "#e2f3ff"],
+        "hills": ["#e3eefc", "#a9c3e6"],
+        "decor": "pines",
+        "tree": "#2d6a5d",
+        "top": "#ffffff",
+        "topLight": "#ffffff",
+        "dirt": "#6f86b8",
+        "dirt2": "#5f75a6",
+        "deep": "#2f3a62",
+        "rock": "#a7b8d6",
+        "rock2": "#8a9cbe",
+        "wood": "#8e6b4a",
+        "wood2": "#6c4f35",
+        "liquid": "#3f86d8",
+        "liquidLight": "#c4e4ff"
+      }
+    },
+    {
+      "id": "jungle",
+      "name": "Tropical Jungle",
+      "hazard": "water",
+      "wind": {
+        "scale": 0.7,
+        "bias": 0
+      },
+      "spawn": {
+        "margin": 260,
+        "jitter": 60
+      },
+      "gen": {
+        "base": 0.66,
+        "amp": 300,
+        "rough": 20,
+        "caves": 2,
+        "platforms": 3,
+        "gaps": 2,
+        "bridges": 2,
+        "pillars": 0,
+        "mesa": false,
+        "peaks": 0,
+        "barrels": 2,
+        "fieldMines": 1
+      },
+      "palette": {
+        "sky": ["#2f9fd8", "#d4f6d8"],
+        "hills": ["#5ccf8a", "#2a9a6a"],
+        "decor": "palms",
+        "tree": "#1f7a48",
+        "top": "#46c043",
+        "topLight": "#a2ec62",
+        "dirt": "#7a5236",
+        "dirt2": "#66442c",
+        "deep": "#2e1e16",
+        "rock": "#8a9a82",
+        "rock2": "#6f806a",
+        "wood": "#b37c43",
+        "wood2": "#87592e",
+        "liquid": "#169fd6",
+        "liquidLight": "#8de8ff"
+      }
+    }
+  ]
+}

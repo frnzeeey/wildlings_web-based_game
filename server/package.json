@@ -1,0 +1,11 @@
+{
+  "name": "@wildlings/server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --disable-warning=ExperimentalWarning src/main.ts",
+    "start": "node --disable-warning=ExperimentalWarning src/main.ts"
+  },
+  "dependencies": { "@wildlings/shared": "*", "ws": "^8.22.1" }
+}

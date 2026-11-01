@@ -1,0 +1,68 @@
+{
+  "specVersion": "1.0.0",
+  "protocolVersion": 1,
+  "world": {
+    "width": 2600,
+    "height": 1300,
+    "waterLevel": 1235,
+    "gravity": 620,
+    "windAccel": 160,
+    "tickRate": 60,
+    "edgeKill": 400
+  },
+  "character": {
+    "radius": 13,
+    "hp": 100,
+    "walkSpeed": 80,
+    "maxClimb": 3,
+    "boostClimb": 7,
+    "boostCostMul": 2,
+    "jumpVX": 130,
+    "jumpVY": -300,
+    "maxEnergy": 100,
+    "energyPerPx": 0.45,
+    "jumpCost": 12,
+    "fallSafeSpeed": 500,
+    "fallDamagePerSpeed": 0.09,
+    "maxFallSpeed": 1500,
+    "maxAimDistance": 260,
+    "muzzleOffset": 19,
+    "muzzleLift": 4
+  },
+  "turn": {
+    "defaultTime": 30,
+    "timeOptions": [15, 20, 30, 45, 60, 0],
+    "startDelay": 1.0,
+    "settleCalm": 0.6,
+    "actionTimeout": 15,
+    "settleMin": 0.8,
+    "settleTimeout": 6,
+    "maxProjectileAge": 12
+  },
+  "wind": {
+    "levels": { "off": 0, "low": 0.5, "normal": 1, "high": 1.6 },
+    "step": 0.05
+  },
+  "damage": {
+    "contactPad": 3,
+    "knockbackLift": 0.45
+  },
+  "suddenDeath": {
+    "startTurn": 24,
+    "waterRisePerTurn": 30,
+    "minWaterLevel": 700
+  },
+  "match": {
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "startHPOptions": [50, 100, 150, 200]
+  },
+  "net": {
+    "snapshotRateActive": 20,
+    "snapshotRateIdle": 4,
+    "interpDelayMs": 100,
+    "reconnectGrace": 60,
+    "aimSendRate": 15,
+    "maxMessagesPerSecond": 60
+  }
+}
